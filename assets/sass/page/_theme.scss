@@ -1,0 +1,66 @@
+/* ========================================================
+ styles for page
+======================================================== */
+
+/*page-ttl*/
+.page-ttl{
+	font-size: 5rem;
+	font-weight: 700;
+  @include m-font-Notocjkjp;
+	padding: 5rem 0 5rem 9rem;
+	line-height: 1.5;
+	span{
+		display: block;
+	}
+	.eng-ttl{
+		font-size: 1.7rem;
+		background: -webkit-linear-gradient($color01, $color02);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    @include m-font-Redhatdisplay;
+		font-weight: 700;
+	}
+}
+/* about-page*/
+
+  .about-img{
+		text-align: right;
+		img{
+			display: inline-block;
+			height: 37.3rem;
+			width: 100%;
+			object-fit: cover;
+			padding-left: 9rem;
+		}
+		.breadcrumbs{
+			padding-left: 9rem;
+		}
+	}
+	.about-content{
+		margin: 3rem 0;
+		text-align: center;
+	}
+	.sample-blk{
+		padding-bottom: 5rem;
+		.ttl{
+			font-size: 3rem;
+			padding-bottom: 2rem;
+		}
+	}
+	.not-found{
+		text-align: center;
+		h2{
+			font-size: 2rem;
+		}
+		.s-mb-30{
+			font-weight: 700;
+			font-size: 1.8rem;
+		}
+		.btn02{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}

@@ -1,0 +1,228 @@
+/* ========================================================
+form
+======================================================== */
+
+.contact-form {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 5rem 0;
+  @include m-font-Notocjkjp;
+
+  .form-txt {
+    line-height: 1.5;
+    padding-bottom: 4rem;
+    font-size: 1.6rem;
+  }
+
+  .contact-form-input {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2.5rem;
+
+    label,
+    .fileupload,
+    .checkbox-txt {
+      width: 29%;
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .required {
+      color: red;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding-left: 10px;
+    }
+  }
+
+  .contact-input {
+    width: 67%;
+
+    .input,
+    .textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      font-family: 'Noto Sans', 'Noto Sans CJK JP', sans-serif;
+      font-size: 1.6rem;
+      outline: none;
+    }
+
+    .textarea {
+      resize: none;
+    }
+  }
+
+  .checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    .wpcf7-list-item-label {
+      font-size: 0;
+    }
+  }
+
+  .send-btn {
+    text-align: center;
+  }
+
+  .send-btn .send {
+    line-height: 6rem;
+    position: relative;
+    margin: 0 auto;
+    width: 30rem;
+    padding: 0 !important;
+    border: none;
+    color: #fff;
+    background: #000 !important;
+    border: 1px solid #000;
+    font-size: 1.125em;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 7px !important;
+
+    &:after {
+      display: inline-block;
+      position: absolute;
+      right: 3rem;
+      top: 0;
+      content: '>';
+    }
+  }
+
+  .send-btn input[type='submit']:disabled {
+    opacity: 0.5;
+  }
+
+  .wpcf7-spinner {
+    display: none;
+  }
+
+  .submit {
+    background-color: transparent;
+    color: #fff;
+    font-weight: 700;
+    padding: 2rem 8rem;
+    display: block;
+    cursor: pointer;
+    border: none;
+  }
+
+  .img-upload-btn {
+    padding: 1.3rem 5rem;
+    border: 1px solid $color14;
+    box-sizing: border-box;
+    background: $white;
+    color: $color15;
+    font-size: 1.4rem !important;
+    width: 29rem !important;
+    display: inline-block;
+    text-align: center;
+    border-radius: 2rem;
+  }
+
+  .no-file {
+    font-size: 1.4rem;
+    color: $black;
+  }
+
+  input[type='file'] {
+    display: none;
+  }
+
+  .multiple-select {
+    font-size: 1.2rem;
+    display: block;
+  }
+
+  .checkbox-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .checkbox-list {
+    display: block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    input {
+      padding: 0;
+      height: initial;
+      width: initial;
+      margin-bottom: 0;
+      display: none;
+      cursor: pointer;
+    }
+
+    label {
+      position: relative;
+      cursor: pointer;
+      padding-left: 4rem;
+    }
+
+    .wpcf7-list-item-label {
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 28px;
+        height: 28px;
+        border: 1px solid $color16;
+        box-sizing: border-box;
+        background: #fff;
+        content: '';
+        transform: translateY(-50%);
+      }
+    }
+
+    .wpcf7-list-item-label::after {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 8px;
+      width: 7px;
+      height: 18px;
+      border: solid $color15;
+      content: '';
+      transform: translatey(-50%) rotate(45deg);
+      border-width: 0 3px 3px 0;
+    }
+  }
+
+  .checkbox-list input:checked+.wpcf7-list-item-label:after {
+    display: block;
+  }
+
+  .type-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .checkbox-list {
+      margin-bottom: 0;
+    }
+
+    .wpcf7-list-item {
+      margin: 0 !important;
+    }
+  }
+
+  .ct-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      margin-right: 10px;
+    }
+  }
+}

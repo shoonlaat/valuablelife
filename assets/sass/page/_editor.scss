@@ -1,0 +1,192 @@
+/* ========================================================
+ styles for theme-editor
+======================================================== */
+
+html :where(.wp-block){
+	max-width: 100% !important;
+}
+.block-editor__container h2,.underline{
+	  font-size: 3rem !important;
+		text-align: center !important;
+		font-weight: 700;
+	  @include m-font-Notocjkjp;
+		padding-bottom: 4rem;
+		letter-spacing: 0.9px;
+		margin-bottom: 4rem;
+		position: relative;
+		&::after{
+			content: "";
+			width: 10rem;
+			height: 0.3rem;
+			text-align: center;
+			background: -webkit-linear-gradient($color01, $color02);
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+
+    }
+}
+.about-page-content{
+	background: url(#{$v-img-path}shared/block_column_bg.jpg) no-repeat top center;
+	max-width: 135rem;
+	margin:0 auto;
+	background-size: 57rem;
+	padding-top: 10.5rem;
+}
+.content-column{
+	display: flex;
+	justify-content: space-between;
+}
+.content-txt{
+	font-size: 1.4rem;
+	@include m-font-Notocjkjp;
+	font-weight: 400;
+	width: 50%;
+	p{
+		margin-bottom: 3.8rem;
+		line-height: 1.5;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+.content-img{
+	width: 40%;
+	img{
+		object-fit: cover;
+	}
+}
+
+.right-blk{
+	padding-left: 9rem;
+}
+.gradient-blk{
+	margin-top: 5rem;
+	.bg-blk{
+		background: linear-gradient(93.07deg, #A12BF4 25.06%, #496CF6 99.99%);
+		height: 26rem;
+		color: #fff;
+		text-align: right;
+	}
+	.blk-title{
+		padding: 6rem 9rem 0 0;
+	}
+	.eng-txt{
+		font-size: 4.7rem;
+		font-weight: 700;
+		@include m-font-Redhatdisplay;
+		display: block;
+	}
+	.jp-txt{
+		font-size: 1.5rem;
+		font-weight: 700;
+		@include m-font-Notocjkjp;
+	}
+	.blk-content{
+		background-color: $white;
+		top: -8rem;
+		position: relative;
+		color: $white;
+		margin-right: 9rem;
+	}
+	.blk-content-ttl{
+			font-size: 3rem;
+			@include m-font-Notocjkjp;
+			text-align: left;
+			padding: 0 5rem;
+			span{
+				background-color: $color10;
+				line-height: 1.7;
+				position: relative;
+				z-index: 2;
+				top: -3rem;
+				display: inline;
+				padding: 0 0.8rem ;
+			}
+			.blk-txt{
+				font-size: 1.5rem;
+				font-weight: 400;
+				@include m-font-Notocjkjp;
+				color: $color03;
+				line-height: 1.9;
+			}
+	}
+}
+.left-blk{
+	padding-right: 9rem;
+	.bg-blk{
+		text-align: left;
+	}
+	.blk-title{
+		padding-left: 9rem;
+	}
+	.blk-content{
+		margin-right: 0;
+		margin-left: 9rem;
+	}
+	.blk-content-ttl{
+		text-align: right;
+	}
+	p{
+		text-align: left;
+	}
+} 
+.txt-box{
+	position: relative;
+	max-width: 135rem;
+	margin: 0 auto 3rem !important;
+	padding: 5rem ;
+	&::before{
+		position: absolute;
+    top: 0;
+    left: 0;
+    width: 4rem;
+    height: 4rem;
+    background: url(#{$v-img-path}shared/left_top_angle.png) no-repeat center/cover;
+    content: "";
+	}
+	&::after{
+		position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 4rem;
+    height: 4rem;
+    background: url(#{$v-img-path}shared/right_bottom_angle.png) no-repeat center/cover;
+    content: "";
+	}
+	.box-ttl{
+		margin: 0 !important;
+    margin-bottom: 1rem !important;
+    color: $color12;
+    @include m-font-Yumincho;
+    font-weight: 500;
+		font-size: 2.4rem !important;
+	}
+	.txtbox-txt{
+		font-size: 1.6rem;
+		@include m-font-Yumgothic;
+		line-height: 1.7;
+	}
+}
+.txt-box2{
+	border: 1px solid $color13;
+	max-width: 135rem;
+	margin: 0 auto 3rem !important;
+	padding:5rem;
+	.box-ttl{
+		color: $color11 !important;
+    font-size: 1.4rem !important;
+		@include m-font-Yumgothic;
+		padding-bottom: 1.4rem;
+		margin:0 !important;
+	}
+	.txtbox-txt{
+		p{
+			font-size: 1.4rem;
+			@include m-font-Yumgothic;
+			margin: 1rem 0 !important;
+			line-height: 1.8;
+		}
+	}
+}

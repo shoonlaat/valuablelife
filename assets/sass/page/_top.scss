@@ -1,0 +1,566 @@
+/* ========================================================
+ styles for front page
+======================================================== */
+
+.loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  transition: all 1s;
+
+  @keyframes fade-anim {
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .loader-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .loader-logo {
+    opacity: 0;
+    -webkit-animation: fade-anim 3s forwards;
+    -moz-animation: fade-anim 3s forwards;
+    -ms-animation: fade-anim 3s forwards;
+    -o-animation: fade-anim 3s forwards;
+    animation: fade-anim 3s forwards;
+
+    @include mq(sp) {
+      max-width: 181px;
+    }
+  }
+
+  .txt {
+    font-weight: 900;
+    text-align: center;
+    @include m-font();
+
+    @keyframes fade-in {
+      100% {
+        opacity: 1;
+        filter: blur(0);
+      }
+    }
+
+    @include mq(sp) {
+      line-height: 1.6;
+      margin-top: 2.5rem;
+      font-size: 2rem;
+      letter-spacing: -2px;
+    }
+
+    @include mq() {
+      margin-top: 7.5rem;
+      font-size: 3rem;
+      letter-spacing: -3px;
+    }
+
+    span {
+      display: inline-block;
+      opacity: 0;
+      filter: blur(1px);
+
+      &:nth-child(1) {
+        animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
+
+      &:nth-child(2) {
+        animation: fade-in 0.8s 0.25s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
+
+      &:nth-child(3) {
+        animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
+
+      &:nth-child(4) {
+        animation: fade-in 0.8s 0.55s forwards cubic-bezier(0.11, 0, 0.5, 0);
+      }
+
+      &:nth-child(5) {
+        animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.5, 0, 0.5, 0);
+      }
+
+      &:nth-child(6) {
+        animation: fade-in 0.8s 0.85s forwards cubic-bezier(0.5, 0, 0.5, 0);
+      }
+
+      &:nth-child(7) {
+        animation: fade-in 0.8s 1s forwards cubic-bezier(0.5, 0, 0.5, 0);
+      }
+
+      &:nth-child(8) {
+        animation: fade-in 0.8s 1.15s forwards cubic-bezier(0.5, 0, 0.5, 0);
+      }
+
+      &:nth-child(9) {
+        animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.5, 0, 0.5, 0);
+      }
+
+      &:nth-child(10) {
+        animation: fade-in 0.8s 1.45s forwards cubic-bezier(0.5, 0, 0.5, 0);
+      }
+
+      &:nth-child(11) {
+        animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.5, 0, 0.5, 0);
+      }
+
+      &:nth-child(12) {
+        animation: fade-in 0.8s 1.75s forwards cubic-bezier(0.5, 0, 0.5, 0);
+      }
+
+      &:nth-child(13) {
+        animation: fade-in 0.8s 1.9s forwards cubic-bezier(0.5, 0, 0.5, 0);
+      }
+
+      &:nth-child(14) {
+        animation: fade-in 0.8s 2.05s forwards cubic-bezier(0.5, 0, 0.5, 0);
+      }
+
+      &:nth-child(15) {
+        animation: fade-in 0.8s 2.2s forwards cubic-bezier(0.5, 0, 0.5, 0);
+      }
+
+      &:nth-child(16) {
+        animation: fade-in 0.8s 2.35s forwards cubic-bezier(0.5, 0, 0.5, 0);
+      }
+
+      &:nth-child(17) {
+        animation: fade-in 0.8s 2.5s forwards cubic-bezier(0.5, 0, 0.5, 0);
+      }
+
+      &:last-child {
+        animation: fade-in 0.8s 2.65s forwards cubic-bezier(0.5, 0, 0.5, 0);
+      }
+    }
+
+    .text-color {
+      background: -webkit-linear-gradient($color01, $color02);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.sec-mv {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background-color: $white;
+
+  @include mq {
+    padding-bottom: 7.5rem;
+  }
+
+  .img-blk {
+    display: flex;
+    justify-content: flex-end;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    @keyframes scale {
+      from {
+        width: 40%;
+        height: 67.5rem;
+      }
+
+      to {
+        width: 22.3%;
+        height: 60.2rem;
+      }
+    }
+
+    .mv-img {
+      @include mq(sp) {
+        width: 33.33%;
+        height: 33.4rem;
+      }
+
+      @include mq() {
+        width: 40%;
+        height: 67.5rem;
+      }
+
+      &.js-mv-img {
+        @include mq {
+          width: 22.3%;
+          height: 60.2rem;
+          animation: scale 2s;
+        }
+      }
+    }
+
+    .img-01 {
+      background: url(#{$v-img-path}top/mv_img01.jpg) no-repeat center/cover;
+    }
+
+    .img-02 {
+      background: url(#{$v-img-path}top/mv_img02.jpg) no-repeat center/cover;
+    }
+
+    .img-03 {
+      background: url(#{$v-img-path}top/mv_img03.jpg) no-repeat center/cover;
+    }
+  }
+
+  .mv-txt {
+    color: $color03;
+    font-weight: 700;
+    @include m-font;
+
+    @include mq(sp) {
+      line-height: 1.45;
+      padding: 3.2rem 2rem 2rem;
+      font-size: 3.4rem;
+      letter-spacing: 2px;
+    }
+
+    @include mq(sp_max) {
+      font-size: 2.8rem;
+    }
+
+    @include mq {
+      position: absolute;
+      top: 21%;
+      left: 10rem;
+      line-height: 1.5;
+      font-size: 5.2rem;
+    }
+
+    span {
+      background: linear-gradient(to top, $color04 30%, transparent 30%);
+    }
+  }
+
+  .mv-serious-txt {
+    background: linear-gradient(93.07deg, $color01 25.06%, $color02 99.99%);
+
+    @include mq(sp) {
+      width: 100%;
+      padding: 2rem 2.3rem 2.2rem 2.3rem;
+      letter-spacing: 0.8px;
+    }
+
+    @include mq {
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+      width: 77.8%;
+      padding: 3rem 0 19.3rem 10.3rem;
+    }
+
+    p {
+      color: $white;
+      font-weight: 600;
+      @include m-font-Redhatdisplay;
+
+      @include mq(sp) {
+        line-height: 1.5;
+        font-size: 1rem;
+      }
+
+      @include mq {
+        width: 31%;
+        line-height: 1.6;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.sec-about {
+  text-align: center;
+
+  @include mq {
+    margin: 6rem 0;
+  }
+
+  .about-inner {
+    background:url(#{$v-img-path}top/about_bg.jpg) no-repeat center/contain;
+
+    @include mq(sp) {
+      padding: 6rem 2.5rem 5rem;
+      max-width: 100%;
+    }
+
+    @include mq {
+      margin: 0 auto;
+      padding: 8rem 0;
+      max-width: 74rem;
+    }
+  }
+
+  .sub-ttl {
+    line-height: 1.6;
+    color: $color03;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    @include m-font-Notocjkjp;
+
+    @include mq(sp) {
+      padding: 2rem 0 2.5rem;
+      font-size: 2.2rem;
+    }
+
+    @include mq(sp_max) {
+      font-size: 1.8rem;
+    }
+
+    @include mq {
+      padding: 4rem 0 2.2rem;
+      font-size: 3rem;
+    }
+  }
+
+  .about-txt {
+    font-weight: 400;
+    @include m-font-Notocjkjp;
+
+    @include mq(sp) {
+      line-height: 2;
+      padding-bottom: 2.8rem;
+      font-size: 1.4rem;
+      text-align: left;
+    }
+
+    @include mq {
+      line-height: 1.8;
+      padding: 0 36px;
+      padding-bottom: 6.5rem;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+  }
+}
+
+.sec-news {
+  background: url(#{$v-img-path}top/new_bg.png) no-repeat;
+
+  @include mq(sp) {
+    background-size: contain;
+    background-position: left 0px bottom 27px;
+  }
+
+  @include mq {
+    padding-bottom: 10rem;
+    background-size: 49rem;
+    background-position: left -53px bottom -21px;
+  }
+
+  @include mq(sp) {
+    text-align: center;
+  }
+
+  @include mq {
+    text-align: right;
+  }
+
+  .inner {
+    @include mq {
+      padding-top: 4rem;
+    }
+
+    .sec-news-content {
+      @include mq(sp) {
+        display: block;
+      }
+
+      @include mq {
+        display: flex;
+        justify-content: space-between;
+      }
+
+    }
+
+    .sec-ttl {
+      @include mq {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.news-list {
+  font-weight: 500;
+  @include m-font-Notocjkjp;
+
+  @include mq(sp) {
+    padding-top: 2.1rem;
+    font-size: 1.4rem;
+    text-align: left;
+  }
+
+  @include mq {
+    width: 60%;
+    padding-top: 2.2rem;
+    font-size: 1.5rem;
+  }
+
+  li {
+    display: flex;
+    line-height: 1.2;
+    border-bottom: 1px solid $color05;
+
+    @include mq(sp) {
+      flex-direction: column;
+      margin-bottom: 2.3rem;
+      padding-bottom: 2.3rem;
+      letter-spacing: 0.2px;
+
+      &:last-child {
+        margin-bottom: 3rem;
+      }
+    }
+
+    @include mq {
+      margin-bottom: 3.9rem;
+      padding-bottom: 3.2rem;
+
+      &:last-child {
+        margin-bottom: 2.7rem;
+      }
+    }
+    span {
+      font-weight: 600;
+      @include m-font-Redhatdisplay;
+  
+      @include mq(sp) {
+        padding-bottom: 0.8rem;
+      }
+  
+      @include mq {
+        margin-right: 2rem;
+      }
+    }
+
+
+  }
+}
+
+.sec-contact {
+  background: url(#{$v-img-path}top/contact_bg.png)center/cover;
+
+  @include mq(sp) {
+    margin-top: 7.3rem;
+    padding: 6.2rem 2rem 5rem;
+  }
+
+  @include mq {
+    padding: 8.5rem 0 7.2rem;
+  }
+
+  .sec-ttl {
+    background: $white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    background-clip: text;
+    text-fill-color: rgba(0, 0, 0, 0);
+  }
+
+  .contact-txt {
+    color: $white;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.5px;
+    @include m-font-Notocjkjp;
+
+    @include mq(sp) {
+      line-height: 1.8;
+      padding: 1.8rem 0 2.2rem;
+      font-size: 1.4rem;
+    }
+
+    @include mq {
+      padding-top: 2.2rem;
+      padding-bottom: 3.4rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  .contact-btn-blk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq(sp) {
+      flex-direction: column;
+    }
+
+    .btn02 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #262626;
+      color: $white;
+      font-weight: 700;
+      border-radius: 6px;
+      @include m-font-Notocjkjp;
+
+      @include mq(sp) {
+        width: 100%;
+        margin-bottom: 1.3rem;
+        padding: 1.5rem 1.6rem;
+        font-size: 1.6rem;
+      }
+
+      @include mq {
+        width: 40.5rem;
+        margin-right: 1.2rem;
+        padding: 2.3rem 3.1rem;
+        font-size: 1.8rem;
+      }
+
+      &:hover {
+        .contact-arrow {
+          &::before {
+            left: 60%;
+          }
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .contact-arrow {
+      position: relative;
+      border: 1px solid $white;
+      border-radius: 50%;
+
+      @include mq(sp) {
+        width: 2.8rem;
+        height: 2.8rem;
+      }
+
+      @include mq {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0.3rem;
+        height: 0.3rem;
+        border: solid $white;
+        content: "";
+        -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+        transform: translate(-50%, -50%) rotate(-45deg);
+        transition: 0.3s ease-in;
+        border-width: 0px 1px 1px 0;
+      }
+    }
+
+  }
+}
